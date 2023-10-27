@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>ArchiMuse</title>
+
+    <!-- Icone da página -->
+    <link rel="icon" href="imagens/historia.png">
+
+    <!-- Google Fonts - Robot-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- CSS do projeto -->
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<header>
+    <!-- Definição da barra de navegação -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-stilo-nav">
+        <section class="container py-3">
+            <a href="#" class="navbar-brand">
+                <img class="img-fluid" src="imagens/historia.png" alt="Logo">
+                <span>ArchiMuse</span>
+            </a>
+            <!-- Criação do botão para representar o menu hamburguer -->
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-items"
+                aria-controls="navbar-items" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <!-- Definição dos links do menu -->
+            <section class="collapse navbar-collapse" id="navbar-items">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Dicas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </section>
+        </section>
+    </nav>
+</header>
+
+<body>
+    <!-- Definição do Slider -->
+    <section class="container" id="slider-container">
+        <section class="carousel slide" id="slider" data-bs-interval="2000" data-bs-ride="carousel">
+            <section class="carousel-indicators">
+
+                <!-- Criação dos botões que representam as imagens-->
+                <button type="button" class="active" data-bs-target="#slider" data-bs-slide-to="0" aria-current="true"
+                    aria-label="Slide 1"></button>
+
+                <button type="button" data-bs-target="#slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+                <button type="button" data-bs-target="#slider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+                <button type="button" data-bs-target="#slider" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </section>
+
+            <!-- Definição do conteúdo do carrousel -->
+            <section class="carousel-inner">
+                <section class="carousel-item active">
+                    <img src="imagens/coliseu.jpg" alt="Imagem 1" class="d-block w-100">
+                    <section class="carousel-caption">
+                        <h5>Coliseu</h5>
+                        <a href="#" class="btn btn-dark">Veja mais</a>
+                    </section>
+                </section>
+
+                <section class="carousel-item">
+                    <img src="imagens/bird-s-eye-view-breathtaking-mountain-machu-picchu-peru.jpg" alt="" class="d-block w-100">
+                    <section class="carousel-caption">
+                        <h5>Machu Picchu</h5>
+                        <a href="#" class="btn btn-dark">Veja mais</a>
+                    </section>
+                </section>
+
+                <section class="carousel-item">
+                    <img src="imagens/big-ben-westminster-bridge-sunset-london-uk.jpg" alt="" class="d-block w-100">
+                    <section  class="carousel-caption">
+                        <h5>Big Ben</h5>
+                        <a href="#" class="btn btn-dark">Veja mais</a>
+                    </section>
+                </section>
+
+                <section class="carousel-item">
+                    <img src="imagens/pao_acucar.jpg" alt="" class="d-block w-100">
+                    <section class="carousel-caption">
+                        <h5>Pão de açúcar</h5>
+                        <a href="#" class="btn btn-dark">Veja mais</a>
+                    </section>
+                </section>
+            </section>
+
+            <button type="button" class="carousel-control-prev" data-bs-target="#slider" data-bs-slide="prev">
+                <i class="bi bi-chevron-compact-left"></i>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button type="button" class="carousel-control-next" data-bs-target="#slider" data-bs-slide="next">
+                <i class="bi bi-chevron-compact-right"></i>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </section>
+
+        <!-- Criação dos cards / banners-->
+        <section class="col-12 col-md-10 offset-1" id="mini-banners">
+            <section class="row">
+
+                <!-- Primeiro card -->
+<section id="sobre" class="col-12 col-md-3">
+    <section class="card text-center">
+        <i class="bi bi-bank"></i>
+        <section class="card-body">
+          <h5 class="card-title primary-color">Arquitetura</h5>
+          <p  class="card-text secondary-color">Viaje através do tempo e do espaço enquanto exploramos a rica diversidade arquitetônica de construções históricas ao redor do mundo. Cada estrutura conta sua própria história, refletindo a época e o local de sua criação. </p>
+        </section>
+        <button id="bt" type="button" class="btn card-btn" data-bs-toggle="modal" data-bs-target="#modal1">Veja mais</button>
+    </section>
+  </section>
+  
+  <!-- Segundo card -->
+  <section class="col-12 col-md-3">
+    <section class="card text-center">
+        <i class="bi bi-book"></i>
+        <section class="card-body">
+          <h5 class="card-title primary-color"> Identidade Cultural</h5>
+          <p  class="card-text secondary-color">Embarque numa jornada única no tempo, explorando construções históricas como pilares essenciais na preservação da identidade cultural. Descubra como cada estrutura desempenhou papel vital na riqueza cultural.</p>
+        </section>
+        <button id="bt" type="button" class="btn card-btn" data-bs-toggle="modal" data-bs-target="#modal2">Veja mais</button>
+    </section>
+  </section>
+
+    <!-- Terceiro card -->
+<section class="col-12 col-md-3">
+    <section class="card text-center">
+        <i class="bi bi-tree"></i>
+        <section class="card-body">
+          <h5 class="card-title primary-color">Equilíbrio Natural</h5>
+          <p  class="card-text secondary-color">Explore construções em harmonia profunda com a natureza, refletindo uma concepção sintonizada com o entorno. Cada elemento planejado é um marco de equilíbrio e fonte de inspiração, interagindo com o ambiente.</p>
+        </section>
+        <button id="bt" type="button" class="btn card-btn" data-bs-toggle="modal" data-bs-target="#modal3"> Veja mais </button>
+    </section>
+  </section>
+  
+  <!-- Quarto card -->
+  <section class="col-12 col-md-3">
+    <section class="card text-center">
+        <i class="bi bi-globe-americas"></i>
+        <section class="card-body">
+          <h5 class="card-title primary-color">Marcando Épocas</h5>
+          <p  class="card-text secondary-color">Conheça como arquiteturas e construções históricas tiveram impacto social significativo. Descubra como influenciaram comunidades locais, impulsionaram economias e se tornaram símbolos de orgulho para as pessoas ao redor. </p>
+        </section>
+        <button id="bt" type="button" class="btn card-btn" data-bs-toggle="modal" data-bs-target="#modal4">Veja mais</button>
+    </section>
+  </section>
+
+                <!-- Final dos cards -->
+            </section>
+        </section>
+    </section>
+
+    <!-- Modais -->
+
+    <!-- Modal 1 -->
+<div class="modal" tabindex="-1" id="modal1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Arquitetura</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            A arquitetura ao longo da história reflete a diversidade de culturas e ideias. No Egito Antigo, as imponentes pirâmides e templos destacam-se, exibindo colunas maciças e símbolos religiosos que expressam a adoração aos deuses e a crença na vida após a morte.
+A Grécia antiga, por sua vez, contribui com uma arquitetura notável, exemplificada pelo Partenon, caracterizado por colunas dóricas, jônicas e coríntias. A busca pela harmonia, equilíbrio e proporção reflete a celebração da razão e a busca pela perfeição estética.
+A arquitetura romana, marcada por inovações como arcos, abóbadas e cúpulas, evidencia-se em estruturas como o Coliseu, refletindo a engenhosidade técnica, o poder imperial e a ênfase na monumentalidade.
+O estilo gótico, predominante nas catedrais medievais, apresenta arcos apontados, vitrais coloridos e detalhes ornamentados, buscando conectar o terreno com o divino e transmitindo uma sensação de transcendência.
+No Renascimento, arquitetos como Brunelleschi e Palladio revisitaram os princípios clássicos gregos e romanos. A arquitetura renascentista caracteriza-se por proporções harmônicas, simetria e uma ênfase na beleza natural, marcando uma era de redescoberta cultural e humanismo.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal 2 -->
+  <div class="modal" tabindex="-1" id="modal2">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Identidade Cultural</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Os patrimônios históricos desempenham um papel vital na preservação e transmissão da identidade cultural de uma sociedade. Ao longo dos séculos, essas estruturas se tornaram testemunhas silenciosas do passado, contando histórias que transcendem gerações. A importância desses patrimônios reside na conexão intrínseca entre a arquitetura, a história e a identidade cultural.
+Essas edificações, seja um antigo templo, um castelo medieval ou uma casa ancestral, são marcos tangíveis do legado cultural de uma comunidade. Elas encapsulam não apenas conquistas arquitetônicas, mas também narrativas sociais, crenças e modos de vida. Ao preservar esses patrimônios, uma sociedade valoriza e respeita suas raízes, construindo uma ponte entre o passado e o presente.
+Além disso, os patrimônios históricos servem como fontes de inspiração e aprendizado. Eles oferecem insights sobre as realizações artísticas e técnicas de períodos antigos, estimulando a apreciação pela diversidade cultural. A preservação desses locais também promove o turismo cultural, gerando um impacto econômico positivo e incentivando o entendimento intercultural.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal 3 -->
+  <div class="modal" tabindex="-1" id="modal3">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Equilíbrio Natural</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Na busca pelo "Equilíbrio Natural" na arquitetura, emerge uma abordagem que transcende a mera construção de edifícios para se tornar uma expressão artística que se entrelaça harmoniosamente com a natureza circundante. Cada estrutura, concebida como uma obra de arte viva, é mais do que um simples marco arquitetônico; é uma cuidadosa sinfonia de elementos destinados a criar uma simbiose única com o ambiente.
+Desde a seleção meticulosa dos materiais, escolhidos não apenas por sua funcionalidade, mas por sua afinidade estética com o cenário natural, até o design que segue linhas fluidas e integradas, cada detalhe é uma peça do quebra-cabeça que visa não apenas à utilidade, mas à beleza intrínseca.
+Essas construções não apenas se destacam por sua estética singular, mas também se tornam fontes de inspiração. O equilíbrio atingido não é apenas visual, mas sensorial, convidando a uma experiência que transcende a simples utilidade arquitetônica. Assim, essas obras maestras arquitetônicas não são apenas testemunhas do diálogo entre o homem e a natureza, mas participantes ativos na preservação e celebração da beleza natural.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal 4 -->
+  <div class="modal" tabindex="-1" id="modal4">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Marcando Épocas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Cada estrutura, erguida em um ponto específico do tempo, não é apenas um testemunho físico, mas uma narrativa viva que reverbera por gerações.
+Essas edificações transcendem a função puramente arquitetônica, tornando-se catalisadoras de mudanças sociais. Ao lançar um olhar atento sobre seus alicerces, descobrimos como moldaram as dinâmicas das comunidades locais, fornecendo não apenas abrigo, mas um palco para a expressão cultural e social. São testemunhas e agentes de transformação, impulsionando economias locais e influenciando a identidade coletiva.
+Cada pedra, cada detalhe arquitetônico, conta uma história que vai além do concreto e das estruturas. Essas construções tornam-se ícones, símbolos de orgulho que transcendem o tempo, conectando gerações e mantendo viva a memória coletiva. Ao explorar o legado deixado por essas obras, mergulhamos não apenas na história arquitetônica, mas na rica tapeçaria da história humana, onde cada edifício é uma página escrita na jornada contínua da humanidade.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Destaques -->
+    <!-- Container dos desatques -->
+    <section class="container" id="featured-container">
+        <section class="col-12">
+            <h2 class="title primary-color" id="projetos">Arquiteturas pelo mundo</h2>
+            <p class="subtitle secondary-color">Conheça as principais construções históricas ao redor do mundo</p>
+        </section>
+
+        <!-- Início das imagens-->
+        <section class="col-12" id="featured-images">
+            <section class="row g-4">
+
+                <section class="col-12 col-md-4">
+                    <img src="imagens/saint-isaac-s-cathedral-st-petersburg.jpg" id="foto" alt="imagem 1" class="img-fluid">
+                    <section class="banner-content">
+                        <p>Rússia</p>
+                        <h3>Catedral de Santo Isaac </h3>
+                    </section>
+                </section>
+
+                <section class="col-12 col-md-4">
+                    <img src="imagens/ruins-acropolis.jpg" id="foto" alt="imagem 2" class="img-fluid">
+                    <section class="banner-content">
+                        <p>Grécia</p>
+                        <h3>Acrópole de Atenas</h3>
+                    </section>
+                </section>
+
+                <section class="col-12 col-md-4">
+                    <img src="imagens/famous-stonehenge-united-kingdom-cloudy-sky.jpg" id="foto" alt="imagem 3" class="img-fluid">
+                    <section class="banner-content">
+                        <p>Inglaterra</p>
+                        <h3>Stonehenge</h3>
+                    </section>
+                </section>
+
+                <section class="col-12 col-md-4">
+                    <img src="imagens/closeup-shot-petra-uum-jordan-during-daytime.jpg" id="foto" alt="imagem 4" class="img-fluid">
+                    <section class="banner-content">
+                        <p>Jordânia</p>
+                        <h3>Petra</h3>
+                    </section>
+                </section>
+
+                <section class="col-12 col-md-4">
+                    <img src="imagens/beautiful-vertical-shot-taj-mahal-building-agra-india-clear-sky.jpg" id="foto" alt="imagem 5" class="img-fluid">
+                    <section class="banner-content">
+                        <p>Índia</p>
+                        <h3>Taj Mahal</h3>
+                    </section>
+                </section>
+
+                <section class="col-12 col-md-4">
+                    <img src="imagens/beautiful-view-biggest-mosque-casablanca-morocco-hassan-ii-mosque.jpg" id="foto" alt="imagem 6" class="img-fluid">
+                    <section class="banner-content">
+                        <p>Marrocos</p>
+                        <h3>Mesquita de Haçane II</h3>
+                    </section>
+                </section>
+
+
+            </section>
+        </section>
+    </section>
+    <!-- Fim do container destaques -->
+
+
+    <!-- Fim do container Informações -->
+    </section>
+
+  
+   <!-- FOOTER -->
+<footer class="container-fluid bg-dark-color" id="footer">
+    <section class="container">
+        <section class="row">
+            <section class="row" id="contact-map-container">
+
+    <!-- Formulário -->
+    <section class="col-12 col-md-6" id="contact-form-container">
+         <section class="container">
+            <h3 class="title primary-color" id="contato">Entre em contato</h3>
+            <form id="contact-form">
+
+                <section class="col-12 col-md-10">
+                    <p class="ctt">Endereço: Rua João Batista Catalani, 800, Parque Eldorado</p>
+                    <p class="ctt">Email: contato@micasa.com</p>
+                    <p class="ctt">Telefone: (17) 99146-9885</p>
+                </section>
+
+
+                 <!-- FOOTER TOP -->
+<section class="col-12" id="footer-top">
+    <section class="row justify-content-between">
+
+        <section class="col-4" id="social-icons">
+            <a href="https://www.facebook.com/?locale=pt_BR" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/luana_furlini/" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="bi bi-youtube"></i></a>
+            <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D" target="_blank"><i class="bi bi-twitter"></i></a>
+        </section>
+    </section>
+</section>
+            
+
+<!-- Formulário de Contato -->
+<section class="col-12 col-md-6" id="contact-form-container">
+    <form id="contact-form" action="seu-script-de-processamento.php" method="post">
+        <div class="mb-3">
+            <label for="contactEmail" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="contactEmail" name="contactEmail" required>
+        </div>
+        <div class="mb-3">
+            <label for="contactMessage" class="form-label">Mensagem:</label>
+            <textarea class="form-control" id="contactMessage" name="contactMessage" rows="3" required></textarea>
+        </div>
+        <button type="submit" id="botao" class="btn btn-primary">Enviar Mensagem</button>
+    </form>
+</section>
+
+   <!-- Mapa -->
+   <section class="col-12 col-md-6" id="google-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.3971391605464!2d-48.50548282478112!3d-20.9365607704406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bbe469e09506f1%3A0x336e767ffea97cdf!2sSesi-SP!5e0!3m2!1spt-BR!2sbr!4v1698257007413!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+            </section>
+        </section>
+    </section>
+</footer>
+
+
+
+ <!-- Bootstrap JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+crossorigin="anonymous" defer></script>
+</body>
+
+</html>
